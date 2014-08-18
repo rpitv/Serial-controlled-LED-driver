@@ -1,37 +1,43 @@
 <?php
 
-/*
-Copyright (c) 2014  Daniel D. Bruce
+/******************************************************************************
+	This file is part of i2c_led_control.
+	https://github.com/rpitv/i2c_led_control
+	Copyright 2014
 
-This file is part of serialledcontrol.
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
 
-This program is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation; either version 2 of the License, or
-(at your option) any later version.
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+******************************************************************************/
 
-You should have received a copy of the GNU General Public License along
-with this program; if not, write to the Free Software Foundation, Inc.,
-51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-
-The developer can be found at:
-  daniel@danieldbruce.com
-
-If that doesn't work, contact the Rensselaer Union
-Administration office and ask. Chances are they'll have a
-good idea as to where the developer went. Note that no
-association with Rensselaer Polytechnic Institute shall
-construe any copyright obligations to Rensselaer.
-*/
-
-	if(substr($_SERVER['REMOTE_ADDR'],0,10) != "192.168.1.") {
-		echo $_SERVER['REMOTE_ADDR'].": ";
-		die("You're not really allowed on this server. Sorry.");
-	}
-		include 'index.html';
 ?>
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>RPI TV Lighting System 01</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/jquery.minicolors.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<h2 class='troll'>Imma Website</h2>
+
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.minicolors.min.js"></script>
+	<script src="js/js.js"></script>
+</body>
+</html>
