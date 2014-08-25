@@ -1,102 +1,20 @@
-@font-face {
-	font-family: 'Exo';
-	font-style: normal;
-	font-weight: 400;
-	src: local('Exo Regular'), local('Exo-Regular'), url(../fonts/regular.woff) format('woff');
-}
-@font-face {
-	font-family: 'Exo';
-	font-style: normal;
-	font-weight: 700;
-	src: local('Exo Bold'), local('Exo-Bold'), url(../fonts/bold.woff) format('woff');
-}
-@font-face {
-	font-family: 'Exo';
-	font-style: normal;
-	font-weight: 900;
-	src: local('Exo Black'), local('Exo-Black'), url(../fonts/black.woff) format('woff');
-}
+@charset "utf-8";
+/******************************************************************************
+	This file is part of i2c_led_control.
+	https://github.com/rpitv/i2c_led_control
+	Copyright 2014
 
-* {
-	margin: 0;
-	padding: 0;
-}
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
 
-a {
-	color: inherit;
-	text-decoration: none;
-}
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
 
-body {
-	font-family: "Exo";
-	background: #350309;
-	color: #bec4ca;
-	text-align: center;
-}
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+******************************************************************************/
 
-#header {
-	margin-top: 10px;
-	font-size: 70px;
-	font-weight: 900;
-
-	-webkit-animation: fadein 2s;
-}
-
-@-webkit-keyframes fadein {
-	0%		{ opacity: 0; }
-	100% 	{ opacity: 1; }
-}
-
-#channels div{
-	display: inline-block;
-	margin: 10px;
-}
-
-#picker {
-	border: 1px solid;
-	float: left;
-	padding: 1em;
-	background-color: rgba(255,255,255,0.15);
-}
-input {
-	width: 180px;
-	height: 50px;
-	border: 2px solid black;
-	border-radius: 10px;
-}
-
-label {
-	display: block;
-}
-
-.ui-cs-widget canvas {
-	left: 0;
-}
-
-#select {
-	width: 500px;
-	text-align: center;
-	margin: 20px auto;
-	padding: 20px;
-	border: 1px solid black;
-	border-radius: 10px;
-	background-color: rgba(255,255,255,.1);
-}
-
-#profile {
-	margin-left: 10px;
-	background-color: #333;
-	border: 1px solid #888;
-	color: white;
-	padding: 5px;
-	font-size: inherit;
-	font-family: inherit;
-}
-
-#toggle {
-	padding: 8px 20px;
-	background-color: #333;
-	color: white;
-	border: 2px ridge gray;
-	margin-right: 80px;
-}

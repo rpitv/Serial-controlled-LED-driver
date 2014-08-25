@@ -1,16 +1,10 @@
-Serial-controlled-LED-driver
-============================
+i2c-led-control
+*******************************************************************************
 
-Similar to the LED-Driver repo that already exists, using code from @ethanspitz's PolyDriverBoard
+Description:
+This is a fork of serial_controlled_LED_driver (https://github.com/ddbruce/Serial-controlled-LED-driver).
 
+This fork utilizes a simplified setup, using only a Raspberry Pi and a custom fabricated board, and with a different touch interface.
 
-#####Note: The code I've written, specifically for web, uses [Chromoselector](http://chromoselector.com/). I have not included the necessary files in this repo. You can modify this code to suit your needs, or go over to their site and purchase a license.
-
-I used an Arduino Nano (ATMega 328) and a Raspberry Pi Model B. The devices were connected using a standard mini USB cable. To connect and make sure the PHP code works:
-
-1. Use `lsusb` to find the Arduino vendor ID and product ID. Mine were 0403 and 6001, respectively.
-2. Make a new udev rule by doing `nano /etc/udev/rules.d/50-arduino.rules`.
-  * `SUBSYSTEMS=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", SYMLINK+="arduino, MODE="0666"` (Change the vendor and product IDs if needed.)
-3. Reload udev rules with `udevadm control --reload-rules`
-
-Thanks to [@asquared](http://github.com/asquared) for help writing this.
+Notes:
+The following files are included in this repository for convenience: Bootstrap 3.2, jQuery Minicolors 2.1. These additional files may fall under different licensing than GNU GPL 3. Their inclusion in this repository does not constitute a fork of the code or a change in the licensing.

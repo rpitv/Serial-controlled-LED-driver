@@ -25,19 +25,121 @@
 <html>
 
 <head>
-	<title>RPI TV Lighting System 01</title>
+
+	<title>RPI TV Lighting System 01.0</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
 	<link href="css/jquery.minicolors.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
 
 </head>
 
 <body>
-	<h2 class='troll'>Imma Website</h2>
+	<div class="row" style="margin: 40px 40px;">
+		<div>
+			<h2>TV Wall</h2>
+			<div class="col-xs-12">
+				<div class="btn-group btn-group-justified submaster1">
+					<div class="btn-group">
+						<button type="button" class="btn btn-default">On</button>
+					</div>
+					  <div class="btn-group">
+						<button type="button" class="btn btn-default">Off</button>
+					</div>
+				</div>
 
-	<script src="js/jquery-2.1.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.minicolors.min.js"></script>
-	<script src="js/js.js"></script>
+				<input type="hidden" id="submaster1" class="minicolors master strip1 strip2 " value="ff0000">
+			</div>
+				<div class='col-xs-6'>
+				<input type="hidden" id="strip1" class="minicolors " value="00ff00">
+				</div>
+				<div class='col-xs-6'>
+					<input type="hidden" id="strip2" class="minicolors" value="0000ff">
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<div class="row" style="margin: 40px 40px;">
+		<div>
+			<h2>West Wall</h2>
+			<div class="col-xs-12">
+				<div class="btn-group btn-group-justified submaster2">
+					<div class="btn-group">
+						<button type="button" class="btn btn-default">On</button>
+					</div>
+					  <div class="btn-group">
+						<button type="button" class="btn btn-default">Off</button>
+					</div>
+				</div>
+
+				<input type="hidden" id="submaster2" class="minicolors master strip1 strip2 " value="ff0000">
+			</div>
+				<div class='col-xs-6'>
+				<input type="hidden" id="strip3" class="minicolors " value="00ff00">
+				</div>
+				<div class='col-xs-6'>
+					<input type="hidden" id="strip4" class="minicolors" value="0000ff">
+				</div>
+			</div>
+		</div>
+	<div class="row" style="margin: 40px 40px;">
+		<div>
+			<h2>Couch</h2>
+			<div class="col-xs-12">
+				<div class="btn-group btn-group-justified submaster3">
+					<div class="btn-group">
+						<button type="button" class="btn btn-default">On</button>
+					</div>
+					  <div class="btn-group">
+						<button type="button" class="btn btn-default">Off</button>
+					</div>
+				</div>
+
+				<input type="hidden" id="submaster3" class="minicolors master strip5 strip6 " value="ff0000">
+			</div>
+				<div class='col-xs-6'>
+				<input type="hidden" id="strip5" class="minicolors " value="00ff00">
+				</div>
+				<div class='col-xs-6'>
+					<input type="hidden" id="strip6" class="minicolors" value="0000ff">
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<div class="row" style="margin: 40px 40px;">
+		<div>
+			<h2>Underglow</h2>
+			<div class="col-xs-12">
+				<div class="btn-group btn-group-justified submaster4">
+					<div class="btn-group">
+						<button type="button" class="btn btn-default">On</button>
+					</div>
+					  <div class="btn-group">
+						<button type="button" class="btn btn-default">Off</button>
+					</div>
+				</div>
+
+				<input type="hidden" id="submaster4" class="minicolors master strip7 strip8 " value="ff0000">
+			</div>
+				<div class='col-xs-6'>
+				<input type="hidden" id="strip7" class="minicolors " value="00ff00">
+				</div>
+				<div class='col-xs-6'>
+					<input type="hidden" id="strip8" class="minicolors" value="0000ff">
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+	</div>
+	
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.minicolors.min.js"></script>
+<script src="js/js.js"></script>
+	
 </body>
+
 </html>
