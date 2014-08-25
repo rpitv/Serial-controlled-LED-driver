@@ -134,12 +134,12 @@
 	</div>
 
 	</div>
-	
+
 <script src="js/jquery-2.1.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.minicolors.min.js"></script>
 <script src="js/js.js"></script>
-	
+
 </body>
 
 </html>

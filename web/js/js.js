@@ -17,7 +17,32 @@
 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ******************************************************************************/
 
-$(document).ready( function() {
+
+//create an average color from 2 or more hex values
+function averageColors (){
+
+}
+
+//load page with last used colors
+function getColors () {
+	$.getJSON ('data/settings.js', function(settings) {
+		console.log(settings.settings);
+		$.each(settings.settings, function(k,v) {
+			k = '#' + k;
+			console.log(k + ' ' +v);
+			$(k).minicolors('value',v);
+		});
+	});
+}
+
+//send changes to back end
+//note: json should only be written after change confirmed (maybe)
+function postColors () {
+
+}
+
+function initilizeMiniColors () {
+	//MiniColors Defaults
 	$.minicolors = {
 		defaults: {
 			animationSpeed: 50,
@@ -36,7 +61,7 @@ $(document).ready( function() {
 			theme: 'bootstrap'
 		}
 	};
-	
+	//end defaults
 	$('.minicolors').each( function() {
 		$('#submaster1').minicolors({
 			change: function(){
@@ -67,4 +92,11 @@ $(document).ready( function() {
 		$('#strip7').minicolors();
 		$('#strip8').minicolors();
 	});
+}
+
+$(document).ready( function() {
+
+	initilizeMiniColors();
+	getColors();
+	
 });
