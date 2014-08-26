@@ -26,10 +26,8 @@ function averageColors (){
 //load page with last used colors
 function getColors () {
 	$.getJSON ('data/settings.js', function(settings) {
-		console.log(settings.settings);
 		$.each(settings.settings, function(k,v) {
 			k = '#' + k;
-			console.log(k + ' ' +v);
 			$(k).minicolors('value',v);
 		});
 	});
@@ -37,8 +35,28 @@ function getColors () {
 
 //send changes to back end
 //note: json should only be written after change confirmed (maybe)
-function postColors () {
-
+function postColors (thiz) {
+	var channel = $(thiz).attr('id');
+	var color = $(thiz).val();
+	
+	console.log(channel+color);
+	
+	//write changes to JSON file
+	$.getJSON('../data/settings.js', function(settings){
+		settings.settings[channel] = color;
+		settingsJson = JSON.stringify(settings);
+		
+		//clean channel and color input
+		channel = parseInt(channel.slice(5)) - 1;		//strips begin at 0
+		color = color.slice(1);		//no octothorpe
+		$.post('change.php',{channel:channel,color:color,settings:settingsJson}).done(
+			function(data){
+				if(data){
+					console.log('PHP Error: ' + data);
+				}
+			}
+		);
+	});
 }
 
 function initilizeMiniColors () {
@@ -62,6 +80,7 @@ function initilizeMiniColors () {
 		}
 	};
 	//end defaults
+
 	$('.minicolors').each( function() {
 		$('#submaster1').minicolors({
 			change: function(){
@@ -83,14 +102,46 @@ function initilizeMiniColors () {
 				$('#strip7, #strip8').minicolors('value',$(this).val());
 			}
 		});
-		$('#strip1').minicolors();
-		$('#strip2').minicolors();
-		$('#strip3').minicolors();
-		$('#strip4').minicolors();
-		$('#strip5').minicolors();
-		$('#strip6').minicolors();
-		$('#strip7').minicolors();
-		$('#strip8').minicolors();
+		$('#strip1').minicolors({
+			change: function() {
+				postColors(this);
+			}
+		});
+		$('#strip2').minicolors({
+			change: function() {
+				postColors(this);
+			}
+		});
+		$('#strip3').minicolors({
+			change: function() {
+				postColors(this);
+			}
+		});
+		$('#strip4').minicolors({
+			change: function() {
+				postColors(this);
+			}
+		});
+		$('#strip5').minicolors({
+			change: function() {
+				postColors(this);
+			}
+		});
+		$('#strip6').minicolors({
+			change: function() {
+				postColors(this);
+			}
+		});
+		$('#strip7').minicolors({
+			change: function() {
+				postColors(this);
+			}
+		});
+		$('#strip8').minicolors({
+			change: function() {
+				postColors(this);
+			}
+		});
 	});
 }
 
