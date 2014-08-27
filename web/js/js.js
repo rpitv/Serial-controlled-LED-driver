@@ -32,19 +32,54 @@ function averageColors (thiz){
 	//this needs to change the color of the submaster, but not actually trigger the submaster
 	var idSelector = '#' + $(thiz).attr('id');
 	var classSelector = '.' + $(thiz).attr('id'); 
-	//console.log($(thiz).parents(idSelector));
 	
 	
 	//find the submaster, get id
 	classSelector = '.' + $(idSelector).parents().find(classSelector).attr('id');
-	//find all strips controled by submaster
-	
-	var colorList = [];
+	//find all strips controled by submaster and write to array
 	var colorList = $(classSelector).map(function(){return $(this).attr('value')});
 	
+	var r = [];
+	var g = [];
+	var b = [];
 	$(colorList).each(function(k,v){
-		console.log(v);
-	})
+		r.push(v.slice(1,3));
+		g.push(v.slice(3,5));
+		b.push(v.slice(5,7));
+	});
+	$(r).each(function(k,v){
+		r[k]= h2d(v);
+	});
+	$(g).each(function(k,v){
+		g[k]= h2d(v);
+	});
+	$(b).each(function(k,v){
+		b[k]= h2d(v);
+	});
+	var sumR = parseInt(0);
+	var sumG = parseInt(0);
+	var sumB = parseInt(0);
+	$(r).each(function(k,v){
+		sumR += parseInt(v); 
+	});
+	var avgR = Math.floor(sumR/r.length);
+	avgR = d2h(avgR);
+	$(g).each(function(k,v){
+		sumG += parseInt(v); 
+	});
+	var avgG = Math.floor(sumG/g.length);
+	avgG = d2h(avgG);
+	$(b).each(function(k,v){
+		sumB += parseInt(v); 
+	});
+	var avgB = Math.floor(sumB/b.length);
+	avgB = d2h(avgB);
+
+	var avgRGB;
+	avgRGB= '#' + avgR + avgG + avgB;
+
+	idSelector = '#' + classSelector.slice(1);
+	$(idSelector).siblings().find('.minicolors-swatch-color').css('background', avgRGB);
 }
 
 //load page with last used colors
@@ -62,14 +97,12 @@ function getColors () {
 function postColors (thiz) {
 	var channel = $(thiz).attr('id');
 	var color = $(thiz).val();
-	
-	console.log(channel+color);
-	
+
 	//write changes to JSON file
 	$.getJSON('../data/settings.js', function(settings){
 		settings.settings[channel] = color;
 		settingsJson = JSON.stringify(settings);
-		
+
 		//clean channel and color input
 		channel = parseInt(channel.slice(5)) - 1;		//strips begin at 0
 		color = color.slice(1);		//no octothorpe
