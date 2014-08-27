@@ -50,10 +50,10 @@
 				<input type="hidden" id="submaster1" class="minicolors master strip1 strip2 " value="ff0000">
 			</div>
 				<div class='col-xs-6'>
-				<input type="hidden" id="strip1" class="minicolors " value="00ff00">
+				<input type="hidden" id="strip1" class="minicolors submaster1" value="00ff00">
 				</div>
 				<div class='col-xs-6'>
-					<input type="hidden" id="strip2" class="minicolors" value="0000ff">
+					<input type="hidden" id="strip2" class="minicolors submaster1" value="0000ff">
 				</div>
 			</div>
 		</div>
@@ -72,13 +72,13 @@
 					</div>
 				</div>
 
-				<input type="hidden" id="submaster2" class="minicolors master strip1 strip2 " value="ff0000">
+				<input type="hidden" id="submaster2" class="minicolors master strip3 strip4 " value="ff0000">
 			</div>
 				<div class='col-xs-6'>
-				<input type="hidden" id="strip3" class="minicolors " value="00ff00">
+				<input type="hidden" id="strip3" class="minicolors submaster2" value="00ff00">
 				</div>
 				<div class='col-xs-6'>
-					<input type="hidden" id="strip4" class="minicolors" value="0000ff">
+					<input type="hidden" id="strip4" class="minicolors submaster2" value="0000ff">
 				</div>
 			</div>
 		</div>
@@ -98,10 +98,10 @@
 				<input type="hidden" id="submaster3" class="minicolors master strip5 strip6 " value="ff0000">
 			</div>
 				<div class='col-xs-6'>
-				<input type="hidden" id="strip5" class="minicolors " value="00ff00">
+				<input type="hidden" id="strip5" class="minicolors submaster3" value="00ff00">
 				</div>
 				<div class='col-xs-6'>
-					<input type="hidden" id="strip6" class="minicolors" value="0000ff">
+					<input type="hidden" id="strip6" class="minicolors submaster3" value="0000ff">
 				</div>
 			</div>
 		</div>
@@ -123,10 +123,10 @@
 				<input type="hidden" id="submaster4" class="minicolors master strip7 strip8 " value="ff0000">
 			</div>
 				<div class='col-xs-6'>
-				<input type="hidden" id="strip7" class="minicolors " value="00ff00">
+				<input type="hidden" id="strip7" class="minicolors submaster4" value="00ff00">
 				</div>
 				<div class='col-xs-6'>
-					<input type="hidden" id="strip8" class="minicolors" value="0000ff">
+					<input type="hidden" id="strip8" class="minicolors submaster4" value="0000ff">
 				</div>
 			</div>
 		</div>

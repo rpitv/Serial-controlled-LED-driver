@@ -17,10 +17,34 @@
 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ******************************************************************************/
 
+//convert decimal to hex
+function d2h(d){
+	return d.toString(16);
+}
+
+//convert hex to decimal
+function h2d(h){
+	return parseInt(h,16);
+}
 
 //create an average color from 2 or more hex values
-function averageColors (){
-
+function averageColors (thiz){
+	//this needs to change the color of the submaster, but not actually trigger the submaster
+	var idSelector = '#' + $(thiz).attr('id');
+	var classSelector = '.' + $(thiz).attr('id'); 
+	//console.log($(thiz).parents(idSelector));
+	
+	
+	//find the submaster, get id
+	classSelector = '.' + $(idSelector).parents().find(classSelector).attr('id');
+	//find all strips controled by submaster
+	
+	var colorList = [];
+	var colorList = $(classSelector).map(function(){return $(this).attr('value')});
+	
+	$(colorList).each(function(k,v){
+		console.log(v);
+	})
 }
 
 //load page with last used colors
@@ -102,46 +126,13 @@ function initilizeMiniColors () {
 				$('#strip7, #strip8').minicolors('value',$(this).val());
 			}
 		});
-		$('#strip1').minicolors({
+		$('#strip1, #strip2, #strip3, #strip4, #strip5, #strip6, #strip7, #strip8').minicolors({
 			change: function() {
 				postColors(this);
+				averageColors(this);
 			}
 		});
-		$('#strip2').minicolors({
-			change: function() {
-				postColors(this);
-			}
-		});
-		$('#strip3').minicolors({
-			change: function() {
-				postColors(this);
-			}
-		});
-		$('#strip4').minicolors({
-			change: function() {
-				postColors(this);
-			}
-		});
-		$('#strip5').minicolors({
-			change: function() {
-				postColors(this);
-			}
-		});
-		$('#strip6').minicolors({
-			change: function() {
-				postColors(this);
-			}
-		});
-		$('#strip7').minicolors({
-			change: function() {
-				postColors(this);
-			}
-		});
-		$('#strip8').minicolors({
-			change: function() {
-				postColors(this);
-			}
-		});
+
 	});
 }
 
