@@ -98,21 +98,29 @@ function postColors (thiz) {
 	var channel = $(thiz).attr('id');
 	var color = $(thiz).val();
 
+	
 	//write changes to JSON file
-	$.getJSON('../data/settings.js', function(settings){
-		settings.settings[channel] = color;
-		settingsJson = JSON.stringify(settings);
+	$.ajax({
+		url: '../data/settings.js',
+		dataType: 'json',
+		async: false,
+		success: function(settings){
+			console.log(channel + ' ' + color);
 
-		//clean channel and color input
-		channel = parseInt(channel.slice(5)) - 1;		//strips begin at 0
-		color = color.slice(1);		//no octothorpe
-		$.post('change.php',{channel:channel,color:color,settings:settingsJson}).done(
-			function(data){
-				if(data){
-					console.log('PHP Error: ' + data);
+			settings.settings[channel] = color;
+			settingsJson = JSON.stringify(settings);
+
+			//clean channel and color input
+			channel = parseInt(channel.slice(5)) - 1;		//strips begin at 0
+			color = color.slice(1);		//no octothorpe
+			$.post('change.php',{channel:channel,color:color,settings:settingsJson}).done(
+				function(data){
+					if(data){
+						console.log('PHP Error: ' + data);
+					}
 				}
-			}
-		);
+			);
+		}
 	});
 }
 
@@ -138,7 +146,13 @@ function initilizeMiniColors () {
 	};
 	//end defaults
 
+//work on a better way to find submasters and slaves based on classes
 	$('.minicolors').each( function() {
+		$('#submaster0').minicolors({
+			change: function(){
+				$('#strip1, #strip2, #strip3, #strip4, #strip5, #strip6, #strip7, #strip8').minicolors('value',$(this).val());
+			}
+		});
 		$('#submaster1').minicolors({
 			change: function(){
 				$('#strip1, #strip2').minicolors('value',$(this).val());
