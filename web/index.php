@@ -36,104 +36,183 @@
 <body>
 	<div class="row" style="margin: 40px 40px;">
 		<div>
-			<h2>TV Wall</h2>
+			<h2>Master Control</h2>
+			<p> Note: Buttons do not work yet.</p>
 			<div class="col-xs-12">
-				<div class="btn-group btn-group-justified submaster1">
+				<div class="btn-group btn-group-justified submaster0">
 					<div class="btn-group">
-						<button type="button" class="btn btn-default">On</button>
+						<button type="button" disabled='disabled' class="btn btn-default">On</button>
 					</div>
-					  <div class="btn-group">
-						<button type="button" class="btn btn-default">Off</button>
+					<div class="btn-group">
+						<button type="button" disabled='disabled' class="btn btn-default">Full</button>
+					</div>
+					<div class="btn-group">
+						<button type="button" disabled='disabled' class="btn btn-default">Off</button>
+					</div>
+					<div class="btn-group">
+						<button type="button" disabled='disabled' class="btn btn-default">Away</button>
 					</div>
 				</div>
 
-				<input type="hidden" id="submaster1" class="minicolors master strip1 strip2 " value="ff0000">
-			</div>
-				<div class='col-xs-6'>
-				<input type="hidden" id="strip1" class="minicolors submaster1" value="00ff00">
-				</div>
-				<div class='col-xs-6'>
-					<input type="hidden" id="strip2" class="minicolors submaster1" value="0000ff">
-				</div>
+				<input type="hidden" id="submaster0" class="minicolors master" value="ffffff">
 			</div>
 		</div>
+	</div>
 		
+	</div>
+	<div class="row" style="margin: 40px 40px;">
+		<div>
+			<h2>TV Wall</h2>
+
+			<div class='col-xs-6 col-xs-offset-3'>
+				<div class="btn-group btn-group-justified submaster1">
+					<div class="btn-group">
+						<button type="button" disabled='disabled' class="btn btn-default">On</button>
+					</div>
+					  <div class="btn-group">
+						<button type="button" disabled='disabled' class="btn btn-default">Off</button>
+					</div>
+				</div>
+			</div>
+
+			<div class='col-xs-2 col-xs-offset-5'>
+				<p>Submaster 1</p>
+			</div>
+
+			<div class='col-xs-6 col-xs-offset-3'>
+				<input type="hidden" id="submaster1" class="minicolors master strip1 strip2 " value="ffffff">
+			</div>
+
+			<div class='col-xs-4 col-xs-offset-2'>
+				<p>Strip 1</p>
+			</div>
+			<div class='col-xs-4 col-xs-offset-2'>
+				<p>Strip 2</p>
+			</div>
+		
+			<div class='col-xs-6'>
+				<input type="hidden" id="strip1" class="minicolors submaster1" value="ffffff">
+			</div>
+			<div class='col-xs-6'>
+				<input type="hidden" id="strip2" class="minicolors submaster1" value="ffffff">
+			</div>
+		</div>
 	</div>
 	<div class="row" style="margin: 40px 40px;">
 		<div>
 			<h2>West Wall</h2>
-			<div class="col-xs-12">
+
+			<div class='col-xs-6 col-xs-offset-3'>
 				<div class="btn-group btn-group-justified submaster2">
 					<div class="btn-group">
-						<button type="button" class="btn btn-default">On</button>
+						<button type="button" disabled='disabled' class="btn btn-default">On</button>
 					</div>
 					  <div class="btn-group">
-						<button type="button" class="btn btn-default">Off</button>
+						<button type="button" disabled='disabled' class="btn btn-default">Off</button>
 					</div>
 				</div>
-
-				<input type="hidden" id="submaster2" class="minicolors master strip3 strip4 " value="ff0000">
 			</div>
-				<div class='col-xs-6'>
-				<input type="hidden" id="strip3" class="minicolors submaster2" value="00ff00">
-				</div>
-				<div class='col-xs-6'>
-					<input type="hidden" id="strip4" class="minicolors submaster2" value="0000ff">
-				</div>
+
+			<div class='col-xs-2 col-xs-offset-5'>
+				<p>Submaster 2</p>
+			</div>
+
+			<div class='col-xs-6 col-xs-offset-3'>
+				<input type="hidden" id="submaster2" class="minicolors master strip3 strip4 " value="ffffff">
+			</div>
+
+			<div class='col-xs-4 col-xs-offset-2'>
+				<p>Strip 3</p>
+			</div>
+			<div class='col-xs-4 col-xs-offset-2'>
+				<p>Strip 4</p>
+			</div>
+		
+			<div class='col-xs-6'>
+				<input type="hidden" id="strip3" class="minicolors submaster2" value="ffffff">
+			</div>
+			<div class='col-xs-6'>
+				<input type="hidden" id="strip4" class="minicolors submaster2" value="ffffff">
 			</div>
 		</div>
+	</div>
 	<div class="row" style="margin: 40px 40px;">
 		<div>
 			<h2>Couch</h2>
-			<div class="col-xs-12">
+
+			<div class='col-xs-6 col-xs-offset-3'>
 				<div class="btn-group btn-group-justified submaster3">
 					<div class="btn-group">
-						<button type="button" class="btn btn-default">On</button>
+						<button type="button" disabled='disabled' class="btn btn-default">On</button>
 					</div>
 					  <div class="btn-group">
-						<button type="button" class="btn btn-default">Off</button>
+						<button type="button" disabled='disabled' class="btn btn-default">Off</button>
 					</div>
 				</div>
-
-				<input type="hidden" id="submaster3" class="minicolors master strip5 strip6 " value="ff0000">
 			</div>
-				<div class='col-xs-6'>
-				<input type="hidden" id="strip5" class="minicolors submaster3" value="00ff00">
-				</div>
-				<div class='col-xs-6'>
-					<input type="hidden" id="strip6" class="minicolors submaster3" value="0000ff">
-				</div>
+
+			<div class='col-xs-2 col-xs-offset-5'>
+				<p>Submaster 3</p>
+			</div>
+
+			<div class='col-xs-6 col-xs-offset-3'>
+				<input type="hidden" id="submaster3" class="minicolors master strip5 strip6 " value="ffffff">
+			</div>
+
+			<div class='col-xs-4 col-xs-offset-2'>
+				<p>Strip 5</p>
+			</div>
+			<div class='col-xs-4 col-xs-offset-2'>
+				<p>Strip 6</p>
+			</div>
+		
+			<div class='col-xs-6'>
+				<input type="hidden" id="strip5" class="minicolors submaster3" value="ffffff">
+			</div>
+			<div class='col-xs-6'>
+				<input type="hidden" id="strip6" class="minicolors submaster3" value="ffffff">
 			</div>
 		</div>
-		
 	</div>
 	<div class="row" style="margin: 40px 40px;">
 		<div>
 			<h2>Underglow</h2>
-			<div class="col-xs-12">
+
+			<div class='col-xs-6 col-xs-offset-3'>
 				<div class="btn-group btn-group-justified submaster4">
 					<div class="btn-group">
-						<button type="button" class="btn btn-default">On</button>
+						<button type="button" disabled='disabled' class="btn btn-default">On</button>
 					</div>
 					  <div class="btn-group">
-						<button type="button" class="btn btn-default">Off</button>
+						<button type="button" disabled='disabled' class="btn btn-default">Off</button>
 					</div>
 				</div>
-
-				<input type="hidden" id="submaster4" class="minicolors master strip7 strip8 " value="ff0000">
 			</div>
-				<div class='col-xs-6'>
-				<input type="hidden" id="strip7" class="minicolors submaster4" value="00ff00">
-				</div>
-				<div class='col-xs-6'>
-					<input type="hidden" id="strip8" class="minicolors submaster4" value="0000ff">
-				</div>
+
+			<div class='col-xs-2 col-xs-offset-5'>
+				<p>Submaster 4</p>
+			</div>
+
+			<div class='col-xs-6 col-xs-offset-3'>
+				<input type="hidden" id="submaster4" class="minicolors master strip7 strip8 " value="ffffff">
+			</div>
+
+			<div class='col-xs-4 col-xs-offset-2'>
+				<p>Strip 7</p>
+			</div>
+			<div class='col-xs-4 col-xs-offset-2'>
+				<p>Strip 8</p>
+			</div>
+		
+			<div class='col-xs-6'>
+				<input type="hidden" id="strip7" class="minicolors submaster4" value="ffffff">
+			</div>
+			<div class='col-xs-6'>
+				<input type="hidden" id="strip8" class="minicolors submaster4" value="ffffff">
 			</div>
 		</div>
-		
 	</div>
 
-	</div>
 
 <script src="js/jquery-2.1.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
