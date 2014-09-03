@@ -60,17 +60,17 @@
 	</div>
 		
 	</div>
-	<div class="row" style="margin: 40px 40px;">
+	<div class="row submaster1" style="margin: 40px 40px;">
 		<div>
 			<h2>TV Wall</h2>
 
 			<div class='col-xs-6 col-xs-offset-3'>
 				<div class="btn-group btn-group-justified submaster1">
 					<div class="btn-group">
-						<button type="button" disabled='disabled' class="btn btn-default">On</button>
+						<button type="button" disabled='disabled' class="btn btn-default on">On</button>
 					</div>
 					  <div class="btn-group">
-						<button type="button" disabled='disabled' class="btn btn-default">Off</button>
+						<button type="button" disabled='disabled' class="btn btn-default off">Off</button>
 					</div>
 				</div>
 			</div>
@@ -98,7 +98,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="row" style="margin: 40px 40px;">
+	<div class="row submaster2" style="margin: 40px 40px;">
 		<div>
 			<h2>West Wall</h2>
 
@@ -136,7 +136,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="row" style="margin: 40px 40px;">
+	<div class="row submaster3" style="margin: 40px 40px;">
 		<div>
 			<h2>Couch</h2>
 
@@ -174,7 +174,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="row" style="margin: 40px 40px;">
+	<div class="row submaster4" style="margin: 40px 40px;">
 		<div>
 			<h2>Underglow</h2>
 
