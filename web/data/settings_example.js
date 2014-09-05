@@ -1,0 +1,1 @@
+{"settings":{"strip1":"#6c85ff","strip2":"#ffabc8","strip3":"#f2f3f7","strip4":"#f2f3f7","strip5":"#f2f3f7","strip6":"#f2f3f7","strip7":"#f2f3f7","strip8":"#ff2229"}}
